@@ -11,12 +11,14 @@ export default {
         rice: {
           bg: '#080d16',
           card: '#0f172a',
-          blue: '#1d8cd8',
+          blue: '#2563eb',
+          cyan: '#06b6d4',
           green: '#25D366',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        heading: ['"Outfit"', 'sans-serif'],
         serif: ['"Playfair Display"', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       }

@@ -1,16 +1,16 @@
 export const personalInfo = {
   name: "Katie Daniel DAGNOGO",
-  role: "Développeur Full Stack & Backend",
+  title: "Ingénieur Logiciel · Master 1 BIHAR (Big Data & IA)",
   school: "ESATIC (Abidjan)",
-  diploma: "Licence DASI ('24)",
+  diploma: "Master 1 BIHAR & Licence DASI",
   location: "Abidjan, Côte d'Ivoire",
   email: "katiedanieldagnogo001@gmail.com",
   phone: "+225 07 58 75 71 52",
   phoneRaw: "2250758757152",
   github: "https://github.com/Dagnogo2000",
-  linkedin: "https://www.linkedin.com/in/daniel-dagnogo",
+  linkedin: "https://www.linkedin.com/in/katie-dagnogo-707325341?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   available: true,
-  bio: "Je suis un développeur passionné par la construction d'architectures backend robustes et d'applications modernes qui ne se contentent pas de fonctionner, mais qui résolvent de vrais besoins avec performance et sécurité."
+  bio: "Actuellement en Master 1 BIHAR (Big Data, Intelligence Artificielle et Systèmes Intelligents) à l'ESATIC, je conçois des architectures backend sécurisées, des systèmes d'information bancaires et des solutions de données à forte valeur ajoutée. Mon parcours allie rigueur d'ingénierie logicielle, expérience en milieu bancaire (BNI) et maîtrise du cycle de vie complet des applications modernes."
 };
 
 export const techStackData = [
@@ -20,29 +20,29 @@ export const techStackData = [
     color: "#059669",
     tools: [
       {
-        name: "Node.js",
-        role: "Environnement JavaScript",
-        logo: "https://cdn.simpleicons.org/nodedotjs/339933"
-      },
-      {
-        name: "Express",
-        role: "APIs REST & microservices",
-        logo: "https://cdn.simpleicons.org/express/ffffff"
-      },
-      {
         name: "Spring Boot",
-        role: "Framework Java Entreprise",
+        role: "Architecture d'entreprise & APIs",
         logo: "https://cdn.simpleicons.org/springboot/6DB33F"
       },
       {
-        name: "Laravel",
-        role: "Framework PHP & MVC",
+        name: "Node.js",
+        role: "Services scalables & temps réel",
+        logo: "https://cdn.simpleicons.org/nodedotjs/339933"
+      },
+      {
+        name: "Laravel & PHP",
+        role: "Applications web & back-offices",
         logo: "https://cdn.simpleicons.org/laravel/FF2D20"
       },
       {
-        name: "Python",
-        role: "Scripts, API & données",
+        name: "Python & Django",
+        role: "Data, Machine Learning & Scripts",
         logo: "https://cdn.simpleicons.org/python/3776AB"
+      },
+      {
+        name: "Express.js",
+        role: "Microservices & APIs REST",
+        logo: "https://cdn.simpleicons.org/express/ffffff"
       }
     ]
   },
@@ -53,55 +53,50 @@ export const techStackData = [
     tools: [
       {
         name: "React",
-        role: "Interfaces dynamiques",
+        role: "Interfaces réactives & modulaires",
         logo: "https://cdn.simpleicons.org/react/61DAFB"
       },
       {
-        name: "Next.js",
-        role: "Framework React Full Stack",
-        logo: "https://cdn.simpleicons.org/nextdotjs/ffffff"
-      },
-      {
         name: "Angular",
-        role: "Framework web structuré",
+        role: "Framework structuré d'entreprise",
         logo: "https://cdn.simpleicons.org/angular/DD0031"
       },
       {
-        name: "TypeScript",
-        role: "JavaScript typé & robuste",
-        logo: "https://cdn.simpleicons.org/typescript/3178C6"
+        name: "Next.js",
+        role: "Full Stack SSR & Server Actions",
+        logo: "https://cdn.simpleicons.org/nextdotjs/ffffff"
       },
       {
         name: "Tailwind CSS",
-        role: "CSS utilitaire moderne",
+        role: "Design systems & interfaces modernes",
         logo: "https://cdn.simpleicons.org/tailwindcss/06B6D4"
+      },
+      {
+        name: "HTML5 / CSS3",
+        role: "Standards web & accessibilité",
+        logo: "https://cdn.simpleicons.org/html5/E34F26"
       }
     ]
   },
   {
-    category: "Database",
+    category: "Database & Cloud",
     code: "03",
     color: "#4f46e5",
     tools: [
       {
         name: "PostgreSQL",
-        role: "Base relationnelle avancée",
+        role: "SGBD relationnel & intégrité bancaire",
         logo: "https://cdn.simpleicons.org/postgresql/4169E1"
       },
       {
-        name: "Neon DB",
-        role: "PostgreSQL Serverless Cloud",
-        logo: "https://cdn.simpleicons.org/postgresql/00E699"
-      },
-      {
-        name: "Supabase",
-        role: "Backend as a Service (BaaS)",
-        logo: "https://cdn.simpleicons.org/supabase/3ECF8E"
-      },
-      {
         name: "MongoDB",
-        role: "Base NoSQL orientée documents",
+        role: "Base NoSQL documents & flexibilité",
         logo: "https://cdn.simpleicons.org/mongodb/47A248"
+      },
+      {
+        name: "Supabase / Neon",
+        role: "BaaS Serverless & Cloud SQL",
+        logo: "https://cdn.simpleicons.org/supabase/3ECF8E"
       }
     ]
   },
@@ -111,51 +106,46 @@ export const techStackData = [
     color: "#d97706",
     tools: [
       {
-        name: "Git",
-        role: "Gestion de versions",
-        logo: "https://cdn.simpleicons.org/git/F05032"
-      },
-      {
-        name: "GitHub",
-        role: "Collaboration & CI/CD",
+        name: "Git & GitHub",
+        role: "Gestion de versions & CI/CD",
         logo: "https://cdn.simpleicons.org/github/ffffff"
       },
       {
         name: "Linux (WSL2)",
-        role: "Environnement système",
+        role: "Administration système & shell",
         logo: "https://cdn.simpleicons.org/linux/FCC624"
       },
       {
-        name: "Vercel",
-        role: "Hébergement & déploiement",
-        logo: "https://cdn.simpleicons.org/vercel/ffffff"
+        name: "Postman",
+        role: "Tests d'intégration d'APIs",
+        logo: "https://cdn.simpleicons.org/postman/FF6C37"
       },
       {
-        name: "Postman",
-        role: "Tests d'APIs REST",
-        logo: "https://cdn.simpleicons.org/postman/FF6C37"
+        name: "Vercel",
+        role: "Déploiement continu & Edge",
+        logo: "https://cdn.simpleicons.org/vercel/ffffff"
       }
     ]
   },
   {
-    category: "Conception & IA",
+    category: "Data & IA",
     code: "05",
     color: "#7c3aed",
     tools: [
       {
+        name: "Machine Learning (Django)",
+        role: "Déploiement de modèles prédictifs",
+        logo: "https://cdn.simpleicons.org/scikitlearn/F7931E"
+      },
+      {
         name: "Modélisation UML",
-        role: "Architecture 4 couches",
+        role: "Conception architecturale 4 tiers",
         logo: "https://cdn.simpleicons.org/diagramsdotnet/F08705"
       },
       {
-        name: "Intégration IA",
-        role: "Assistants & LLMs",
+        name: "Intégration LLM & IA",
+        role: "Agents & assistants conversationnels",
         logo: "https://cdn.simpleicons.org/openai/ffffff"
-      },
-      {
-        name: "Power BI / Data",
-        role: "Tableaux de bord & KPIs",
-        logo: "https://cdn.simpleicons.org/powerbi/F2C811"
       }
     ]
   }
@@ -163,129 +153,147 @@ export const techStackData = [
 
 export const parcoursData = [
   {
-    period: "2021 - 2024",
-    title: "Licence en Génie Logiciel (DASI)",
-    institution: "ESATIC · École Supérieure Africaine des TIC (Abidjan)",
+    period: "2019 - 2020",
+    title: "Baccalauréat Scientifique (Série D)",
+    institution: "Lycée Moderne Belle Ville · Bouaké",
     status: "completed",
     badge: null
   },
   {
-    period: "2024 - 2026",
-    title: "Formation Avancée Full Stack & Systèmes",
-    institution: "ESATIC · Développement d'Architectures Web, Mobiles & Cloud",
-    status: "current",
-    badge: "EN COURS"
+    period: "2024 - 2025",
+    title: "Licence en Génie Logiciel (DASI)",
+    institution: "ESATIC · École Supérieure Africaine des TIC (Abidjan)",
+    status: "completed",
+    badge: "DIPLÔMÉ"
   },
   {
-    period: "En continu",
-    title: "Projets Indépendants & R&D",
-    institution: "Applications concrètes, microservices et déploiements Vercel/Cloud",
+    period: "Sept. 2025 - Présent",
+    title: "Master 1 BIHAR (Big Data & Intelligence Artificielle)",
+    institution: "ESATIC · Formation d'Élite en Systèmes Intelligents & Données",
     status: "current",
-    badge: "ACTIF"
+    badge: "EN COURS"
+  }
+];
+
+export const experiencesData = [
+  {
+    period: "Juin 2026 - Sept. 2026",
+    role: "Stagiaire Développeur Applicatif",
+    company: "Banque Nationale d'Investissement (BNI)",
+    location: "Abidjan, Côte d'Ivoire",
+    description: "Conception et mise en place d'une application web de gestion de prêts bancaires pour les salariés de la BNI : simulation d'échéances, workflow de validation hiérarchique et sécurisation des données financières."
+  },
+  {
+    period: "Sept. 2022 - Janv. 2023",
+    role: "Stagiaire Développeur Web",
+    company: "Mandigo-SARL",
+    location: "Bouaké, Côte d'Ivoire",
+    description: "Mise en place d'une application de portefeuille électronique (E-Wallet) : gestion des flux de transactions, rechargement de solde et traçabilité des opérations de paiement."
   }
 ];
 
 export const projectsData = [
   {
-    id: "gesstages",
-    title: "GesStages — Plateforme de Gestion des Stages",
-    badge: "Projet Phare · ESATIC",
+    id: "bni-pret",
+    title: "Gestion des Prêts Bancaires (Salariés BNI)",
+    badge: "🏦 Banque Nationale d'Investissement",
     category: "Full Stack",
     featured: true,
-    shortDesc: "Plateforme complète pour dématérialiser les candidatures, conventions et évaluations de stages des étudiants de l'ESATIC.",
-    overview: "GesStages simplifie l'interaction tripartite entre étudiants, encadrants pédagogiques et tuteurs d'entreprises.",
-    problem: "Processus manuel sur papier avec risques de pertes et retards de validation de diplômes.",
-    solution: "Plateforme web réactive centralisant le dépôt, le suivi en direct et la signature électronique des conventions.",
+    shortDesc: "Application web bancaire d'instruction, simulation et gestion des demandes de prêt destinées aux salariés de la BNI avec workflow d'approbation sécurisé.",
+    overview: "Développée au sein de la Banque Nationale d'Investissement (BNI), cette solution optimise et digitalise l'ensemble du cycle de vie des prêts accordés aux collaborateurs de la banque.",
+    problem: "Lenteur des circuits de validation papier, risques d'erreurs dans le calcul des taux d'endettement et manque de visibilité en temps réel pour la direction des ressources humaines et le service des crédits.",
+    solution: "Une plateforme sécurisée intégrant un moteur de calcul de capacité d'emprunt, la génération automatique d'échéanciers de remboursement et un circuit d'approbation multi-niveaux avec traçabilité complète.",
     highlights: [
-      "Tableau de bord multi-rôles (Étudiant, Tuteur, Administration)",
-      "Validation des conventions et alertes de suivi",
-      "Génération automatique d'attestations en PDF"
+      "Simulateur dynamique de capacité d'emprunt et tableau d'amortissement",
+      "Circuit de validation hiérarchique (Agent, RH, Comité de crédit)",
+      "Gestion rigoureuse des profils, habilitations et audit des actions",
+      "Génération automatique des contrats et notifications d'état"
     ],
-    tags: ["Next.js", "Supabase", "Tailwind CSS", "Vercel"]
+    tags: ["Spring Boot", "PostgreSQL", "Angular", "Sécurité Bancaire", "UML"]
+  },
+  {
+    id: "mandigo-wallet",
+    title: "Application de Portefeuille Électronique",
+    badge: "💳 Mandigo-SARL · Fintech",
+    category: "Full Stack",
+    featured: true,
+    shortDesc: "Solution e-wallet permettant les transferts d'argent instantanés, le rechargement de soldes et le paiement sécurisé de services.",
+    overview: "Système de portefeuille électronique conçu lors de ma mission chez Mandigo-SARL pour démocratiser les transactions numériques fiables.",
+    problem: "Nécessité de gérer des soldes en temps réel avec une garantie absolue contre les doubles dépenses et les pannes réseau.",
+    solution: "Architecture orientée transactions avec verrous pessimistes en base de données, journal d'audit infalsifiable et API REST sécurisée par tokens.",
+    highlights: [
+      "Gestion des soldes en temps réel et historique des mouvements",
+      "Transactions atomiques avec sécurisation des montants",
+      "Interface épurée et adaptée aux mobiles pour les utilisateurs"
+    ],
+    tags: ["PHP", "Laravel", "MySQL", "APIs REST", "Fintech"]
   },
   {
     id: "restauqr",
-    title: "Gestion de Restauration par QR Code",
-    badge: "Produit SaaS · Temps Réel",
+    title: "Système de Restauration par QR Code",
+    badge: "🚀 Produit SaaS · Temps Réel",
     category: "Full Stack",
     featured: false,
-    shortDesc: "Application restaurant : commande directe à table sans serveur via QR code et back-office en temps réel pour la cuisine.",
-    overview: "Solution pensée pour accélérer les prises de commande dans les restaurants et maquis d'Abidjan.",
-    problem: "Files d'attente et erreurs récurrentes dans les commandes lors des heures d'affluence.",
-    solution: "QR code unique par table permettant au client de commander sur son téléphone pendant que la cuisine reçoit les tickets en direct.",
+    shortDesc: "Application restaurant : commande directe à table sans serveur via QR code et back-office en direct pour la cuisine.",
+    overview: "Solution pensée pour accélérer les prises de commande dans les établissements de restauration avec synchronisation instantanée.",
+    problem: "Files d'attente, temps d'attente excessifs et erreurs de transmission lors des heures de pointe.",
+    solution: "QR code unique par table permettant au client de consulter le menu et commander en un clic pendant que la cuisine reçoit les tickets en temps réel.",
     highlights: [
-      "Génération automatique des QR codes par table",
-      "Dashboard gérant : suivi en direct des recettes et des commandes",
-      "Notification temps réel pour la préparation en cuisine"
+      "Génération automatique et dynamique des QR codes par table",
+      "Tableau de bord gérant : suivi en temps réel du chiffre d'affaires",
+      "Notification instantanée en cuisine via WebSockets"
     ],
-    tags: ["Node.js", "PostgreSQL", "QR Engine", "WebSockets"]
+    tags: ["Node.js", "PostgreSQL", "WebSockets", "Tailwind CSS"]
+  },
+  {
+    id: "ml-django",
+    title: "Déploiement d'un Modèle Machine Learning",
+    badge: "🧠 Intelligence Artificielle & Data",
+    category: "Data & IA",
+    featured: false,
+    shortDesc: "Mise en production d'un pipeline de prédiction Machine Learning exposé via une API Django avec interface d'inférence en direct.",
+    overview: "Projet d'ingénierie des données démontrant l'intégration concrète de l'IA dans une application web opérationnelle.",
+    problem: "Le passage complexe d'un notebook d'expérimentation de données vers une API stable et prête pour la production.",
+    solution: "Sérialisation du modèle entraîné, pipeline de prétraitement automatique des entrées et service web Django renvoyant les prédictions en quelques millisecondes.",
+    highlights: [
+      "Prétraitement automatique des données entrantes",
+      "Inférence rapide et score de confiance en temps réel",
+      "Monitoring des performances du modèle"
+    ],
+    tags: ["Python", "Django", "Scikit-Learn", "Machine Learning", "APIs"]
+  },
+  {
+    id: "ecommerce",
+    title: "Plateforme E-Commerce Complète",
+    badge: "🛒 Web App Déployée",
+    category: "Full Stack",
+    featured: false,
+    shortDesc: "Boutique en ligne avec gestion de catalogue, panier d'achat persistant, commandes clients et interface d'administration.",
+    overview: "Plateforme marchande responsive offrant une expérience utilisateur fluide de la sélection de produits jusqu'au passage de commande.",
+    problem: "Besoin d'une plateforme légère, rapide au chargement et facile à administrer sans lourdeur technique.",
+    solution: "Front-end réactif couplé à une base de données relationnelle optimisée pour les recherches par filtres et le suivi des stocks.",
+    highlights: [
+      "Panier réactif et calcul instantané des totaux",
+      "Gestion des stocks et back-office d'administration",
+      "Design soigné optimisé pour la navigation mobile"
+    ],
+    tags: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"]
   },
   {
     id: "chat",
-    title: "Application de Messagerie Instantanée Sécurisée",
-    badge: "Temps Réel & Sécurité",
+    title: "Messagerie Instantanée Sécurisée",
+    badge: "⚡ Temps Réel & Sécurité",
     category: "Backend",
     featured: false,
-    shortDesc: "Messagerie complète développée de zéro avec WebSockets bidirectionnels, canaux de discussion et chiffrement des accès.",
-    overview: "Système de communication instantané mettant l'accent sur la sécurité et la tenue de charge des sockets.",
-    problem: "Garantir un échange fluide sans rechargement tout en protégeant les identifiants utilisateurs.",
-    solution: "Architecture événementielle Node.js avec sockets persistants et authentification par tokens JWT signés.",
+    shortDesc: "Messagerie complète avec communication bidirectionnelle persistante, salons thématiques et chiffrement des accès.",
+    overview: "Système de chat instantané conçu pour explorer la haute concurrence et la sécurité des protocoles d'échange web.",
+    problem: "Assurer la transmission fluide de messages sans rechargement tout en protégeant l'identité et les échanges des utilisateurs.",
+    solution: "Architecture événementielle Node.js avec sockets persistants et authentification renforcée par tokens JWT signés.",
     highlights: [
-      "Mots de passe hachés avec bcrypt et tokens JWT",
-      "Salons publics et canaux de discussion privés",
-      "Statuts de présence et indicateurs de frappe"
+      "Authentification robuste (mots de passe hachés bcrypt, JWT)",
+      "Canaux publics et discussions privées chiffrées",
+      "Indicateurs de présence et statut de frappe en temps réel"
     ],
     tags: ["Node.js", "WebSockets", "MongoDB", "JWT"]
-  },
-  {
-    id: "mafamille",
-    title: "Espace MaFamille",
-    badge: "Web App Déployée",
-    category: "Full Stack",
-    featured: false,
-    shortDesc: "Plateforme de gestion associative et tontines familiales : suivi des cotisations, réunions et transparence financière.",
-    overview: "Centralisation des contributions financières et des procès-verbaux de rencontres périodiques.",
-    problem: "Manque de visibilité et litiges fréquents sur les cahiers de cotisations physiques.",
-    solution: "Tableau de bord transparent où chaque contributeur visualise ses versements et l'état global de la caisse.",
-    highlights: [
-      "Historique exhaustif des cotisations",
-      "Base relationnelle sur Neon PostgreSQL",
-      "Accessible sur mobile et ordinateur"
-    ],
-    tags: ["Next.js", "Neon PostgreSQL", "Tailwind CSS", "Vercel"]
-  },
-  {
-    id: "elections",
-    title: "Carte Interactive des Résultats Électoraux",
-    badge: "Data & Cartographie",
-    category: "Data & Backend",
-    featured: false,
-    shortDesc: "Visualisation géographique dynamique des données électorales stockées en base de données avec cartes Leaflet.",
-    overview: "Restitution spatiale des résultats de scrutins pour faciliter l'analyse décisionnelle.",
-    problem: "L'incompréhension des rapports de données brutes sous forme de tableurs interminables.",
-    solution: "Couche cartographique interactive GeoJSON avec code couleur automatique selon les scores.",
-    highlights: [
-      "Projection spatiale par région et circonscription",
-      "Requêtes d'agrégation SQL optimisées",
-      "Filtres dynamiques par taux de participation"
-    ],
-    tags: ["PHP", "PostgreSQL", "Leaflet.js", "GeoJSON"]
-  },
-  {
-    id: "academics",
-    title: "Gestion des Unités Pédagogiques (UP)",
-    badge: "Ingénierie Logicielle · ESATIC",
-    category: "Architecture & UML",
-    featured: false,
-    shortDesc: "Conception intégrale du système académique de l'ESATIC : 13 règles de gestion, 5 profils d'acteurs et architecture 4 couches.",
-    overview: "Projet de référence en génie logiciel pour structurer informatiquement les cursus et unités d'enseignement.",
-    problem: "Complexité de la répartition des enseignants, des matières et de la validation des crédits académiques.",
-    solution: "Dossier d'analyse UML approfondi et architecture applicative n-tiers garantissant modularité et pérennité.",
-    highlights: [
-      "Diagrammes de cas d'utilisation, classes et séquences",
-      "13 règles de gestion métier implémentées",
-      "Séparation stricte en 4 couches d'architecture"
-    ],
-    tags: ["UML", "Architecture 4 tiers", "Génie Logiciel", "Java"]
   }
 ];
