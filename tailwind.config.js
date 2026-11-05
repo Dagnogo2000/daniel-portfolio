@@ -8,25 +8,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: {
-          bg: '#090d16',
-          card: '#111a2e',
-          border: '#1e2c47',
-          sub: '#94a3b8',
-        },
-        brand: {
-          blue: '#38bdf8',
-          indigo: '#6366f1',
-          green: '#10b981',
-          amber: '#f59e0b',
+        rice: {
+          bg: '#080d16',
+          card: '#0f172a',
+          blue: '#1d8cd8',
+          green: '#25D366',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       }
     },
   },
   plugins: [],
 }
-

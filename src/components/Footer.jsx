@@ -1,22 +1,27 @@
-import React from 'react';
 import { personalInfo } from '../data/portfolioData';
 
 export default function Footer() {
   return (
-    <footer className="py-8 border-t border-[#19243a] text-slate-500 text-xs sm:text-sm">
-      <div className="max-w-6xl mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
-        <div>
-          © {new Date().getFullYear()} {personalInfo.name} · Abidjan, Côte d'Ivoire
+    <footer className="py-12 border-t border-zinc-850 text-zinc-500 text-xs bg-[#080d16]">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-2">
+          <span className="font-bold text-white tracking-wider">PORTFOLIO</span>
+          <span className="text-blue-500 font-bold">.</span>
+          <span className="text-zinc-600">|</span>
+          <span>© {new Date().getFullYear()} {personalInfo.name}</span>
         </div>
-        <div className="flex items-center gap-5">
-          <a href="#top" className="hover:text-sky-400 transition-colors">
+        <div className="flex items-center gap-6">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="hover:text-white transition-colors"
+          >
             Haut de page ↑
-          </a>
+          </button>
           <a
             href={personalInfo.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-sky-400 transition-colors"
+            className="hover:text-white transition-colors"
           >
             GitHub
           </a>
@@ -24,7 +29,7 @@ export default function Footer() {
             href={`https://wa.me/${personalInfo.phoneRaw}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-emerald-400 transition-colors"
+            className="hover:text-green-400 transition-colors"
           >
             WhatsApp
           </a>
@@ -33,4 +38,3 @@ export default function Footer() {
     </footer>
   );
 }
-

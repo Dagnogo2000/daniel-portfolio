@@ -1,101 +1,126 @@
-import React, { useState } from 'react';
-import { Sun, Moon, Menu, X, MessageCircle } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-export default function Navbar({ darkMode, setDarkMode }) {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const navLinks = [
+  { label: 'À PROPOS', href: '#apropos' },
+  { label: 'PROJETS', href: '#projets' },
+  { label: 'TECHNOLOGIES', href: '#technologies' },
+  { label: 'CONTACT', href: '#contact' },
+];
 
-  const navLinks = [
-    { label: "À propos", href: "#apropos" },
-    { label: "Compétences", href: "#competences" },
-    { label: "Projets", href: "#projets" },
-    { label: "Parcours", href: "#parcours" },
-    { label: "Contact", href: "#contact" },
-  ];
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [active, setActive] = useState('');
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleNav = (href) => {
+    setActive(href);
+    setMenuOpen(false);
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#090d16]/85 dark:bg-[#090d16]/85 border-b border-[#19243a]">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        
-        {/* Brand */}
-        <a href="#top" className="flex items-center gap-2.5 font-bold text-lg tracking-tight">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-400 to-indigo-600 grid place-items-center text-white font-extrabold text-sm shadow-md shadow-sky-500/20">
-            D
-          </div>
-          <span className="text-slate-100">Daniel<span className="text-sky-400">.dev</span></span>
+    <motion.nav
+      initial={{ y: -60, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: 'easeOut' }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-black/90 navbar-blur border-b border-zinc-800/60 shadow-lg shadow-black/50'
+          : 'bg-black/70 navbar-blur'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <a
+          href="#hero"
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          className="flex items-center gap-0"
+        >
+          <span className="text-white font-black text-xl tracking-tight uppercase">
+            PORTFOLIO
+          </span>
+          <span className="text-blue-500 font-black text-xl">.</span>
         </a>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-7">
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-sm font-medium text-slate-400 hover:text-white transition-colors duration-150"
+            <button
+              key={link.href}
+              onClick={() => handleNav(link.href)}
+              className={`text-xs font-bold tracking-widest uppercase transition-colors duration-200 ${
+                active === link.href
+                  ? 'text-white'
+                  : 'text-zinc-400 hover:text-white'
+              }`}
             >
               {link.label}
-            </a>
+            </button>
           ))}
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-3">
-          {/* Theme Toggle */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="w-9 h-9 rounded-lg border border-[#1e2c47] bg-[#111a2e] text-slate-400 hover:text-sky-400 hover:border-sky-400 grid place-items-center transition-all duration-150"
-            aria-label="Changer le thème"
-          >
-            {darkMode ? <Sun size={17} /> : <Moon size={17} />}
-          </button>
-
-          {/* WhatsApp Direct */}
+        {/* Right: CV Button */}
+        <div className="hidden md:flex items-center gap-3">
           <a
-            href={`https://wa.me/${personalInfo.phoneRaw}?text=Bonjour%20Daniel,%20j'ai%20vu%20votre%20portfolio`}
+            href="/cv-katie-daniel-dagnogo.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-sm transition-all duration-150"
+            className="bg-blue-600 hover:bg-blue-500 text-white text-xs font-black uppercase tracking-widest px-5 py-2.5 rounded-full transition-all duration-200 hover:scale-105"
           >
-            <MessageCircle size={15} />
-            <span>WhatsApp</span>
+            TÉLÉCHARGER CV
           </a>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden w-9 h-9 rounded-lg border border-[#1e2c47] bg-[#111a2e] text-slate-400 grid place-items-center"
-            aria-label="Ouvrir le menu"
-          >
-            {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
-          </button>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden text-zinc-400 hover:text-white"
+        >
+          <div className="flex flex-col gap-1.5 w-6">
+            <span className={`block h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`block h-0.5 bg-current transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+            <span className={`block h-0.5 bg-current transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+          </div>
+        </button>
       </div>
 
-      {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="md:hidden border-b border-[#19243a] bg-[#090d16] px-6 py-4 flex flex-col gap-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-300 hover:text-sky-400 font-medium py-1.5 text-base border-b border-slate-800/50"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href={`https://wa.me/${personalInfo.phoneRaw}?text=Bonjour%20Daniel,%20j'ai%20vu%20votre%20portfolio`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-emerald-600 text-white font-semibold text-sm"
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="md:hidden bg-black/95 border-t border-zinc-800 px-6 py-6 flex flex-col gap-5"
           >
-            <MessageCircle size={17} />
-            <span>Écrire sur WhatsApp (+225 07 58 75 71 52)</span>
-          </a>
-        </div>
-      )}
-    </nav>
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => handleNav(link.href)}
+                className="text-left text-sm font-bold tracking-widest uppercase text-zinc-300 hover:text-white transition-colors"
+              >
+                {link.label}
+              </button>
+            ))}
+            <a
+              href="/cv-katie-daniel-dagnogo.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-blue-600 text-white text-xs font-black uppercase tracking-widest px-5 py-3 rounded-full text-center"
+            >
+              TÉLÉCHARGER CV
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
-

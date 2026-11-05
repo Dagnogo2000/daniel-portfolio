@@ -1,65 +1,57 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import ProjectModal from './components/ProjectModal';
 import Parcours from './components/Parcours';
+import TechStack from './components/TechStack';
+import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
-import { personalInfo } from './data/portfolioData';
+import ProjectModal from './components/ProjectModal';
 
-export default function App() {
-  const [darkMode, setDarkMode] = useState(true);
+function App() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [copied, setCopied] = useState(false);
-  const [toastMessage, setToastMessage] = useState('');
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [darkMode]);
-
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(personalInfo.email).then(() => {
-      setCopied(true);
-      showToast('Adresse email copiée dans le presse-papier !');
-      setTimeout(() => setCopied(false), 2500);
-    }).catch(() => {
-      showToast(personalInfo.email);
-    });
-  };
-
-  const showToast = (msg) => {
-    setToastMessage(msg);
-    setTimeout(() => setToastMessage(''), 3000);
-  };
 
   return (
-    <div className="min-h-screen bg-[#090d16] text-slate-100 selection:bg-sky-500 selection:text-slate-950">
-      
-      {/* Navbar */}
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="min-h-screen bg-[#080d16] text-white overflow-x-hidden">
+      <Navbar />
 
-      {/* Main Sections */}
       <main>
-        <Hero onCopyEmail={handleCopyEmail} copied={copied} />
-        <About />
-        <Skills />
-        <Projects onSelectProject={setSelectedProject} />
-        <Parcours />
-        <Contact onCopyEmail={handleCopyEmail} copied={copied} />
+        {/* Hero Section */}
+        <section id="hero">
+          <Hero />
+        </section>
+
+        {/* À Propos Section */}
+        <section id="apropos">
+          <About />
+        </section>
+
+        {/* Parcours Section */}
+        <section id="parcours">
+          <Parcours />
+        </section>
+
+        {/* Technologies Section */}
+        <section id="technologies">
+          <TechStack />
+        </section>
+
+        {/* Projets Section */}
+        <section id="projets">
+          <Projects onSelect={setSelectedProject} />
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
 
-      {/* Footer */}
       <Footer />
 
-      {/* Floating WhatsApp (Bottom Right) */}
+      {/* Floating WhatsApp Button */}
       <FloatingWhatsApp />
 
       {/* Project Modal */}
@@ -69,15 +61,8 @@ export default function App() {
           onClose={() => setSelectedProject(null)}
         />
       )}
-
-      {/* Toast Notification */}
-      {toastMessage && (
-        <div className="fixed bottom-6 left-6 z-50 px-4 py-2.5 rounded-xl bg-[#111a2e] border border-sky-400 text-slate-100 text-xs font-semibold shadow-xl shadow-black/50 animate-bounce">
-          {toastMessage}
-        </div>
-      )}
-
     </div>
   );
 }
 
+export default App;

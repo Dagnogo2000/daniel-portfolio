@@ -1,61 +1,79 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { timelineData } from '../data/portfolioData';
+import { parcoursData } from '../data/portfolioData';
+
+const fadeUp = (delay = 0) => ({
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6, ease: 'easeOut', delay },
+});
 
 export default function Parcours() {
   return (
-    <section id="parcours" className="py-16 bg-[#0c1220] border-t border-[#19243a]">
-      <div className="max-w-6xl mx-auto px-6">
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-        >
-          <span className="text-xs font-bold text-sky-400 uppercase tracking-widest block mb-2 font-mono">
-            // Parcours
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mb-3">
-            Formation & Expériences
-          </h2>
-          <p className="text-slate-400 text-sm sm:text-base max-w-2xl mb-10">
-            Un cursus axé sur la rigueur d'ingénierie et la pratique continue.
-          </p>
-        </motion.div>
+    <section className="relative py-24 px-6 bg-[#080d16] overflow-hidden">
+      {/* Divider line */}
+      <div className="max-w-6xl mx-auto">
+        <div className="border-t border-zinc-800 mb-16" />
 
-        <div className="relative pl-6 sm:pl-8 border-l-2 border-[#19243a] ml-2 sm:ml-4 space-y-9">
-          {timelineData.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group"
-            >
-              {/* Dot with pulse on hover */}
-              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3 h-3 rounded-full bg-[#090d16] border-2 border-sky-400 group-hover:scale-125 group-hover:border-emerald-400 transition-all" />
+        <motion.p {...fadeUp(0)} className="text-xs font-bold tracking-[0.25em] uppercase text-zinc-500 mb-12">
+          PARCOURS
+        </motion.p>
 
-              {/* Year badge */}
-              <span className="text-xs font-bold text-sky-400 font-mono tracking-wider block mb-1">
-                {item.year}
-              </span>
+        {/* Horizontal timeline */}
+        <div className="relative">
+          {/* Line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
+            className="hidden md:block absolute top-5 left-0 right-0 h-0.5 bg-gradient-to-r from-green-500 via-green-500 to-blue-500 origin-left"
+            style={{ top: '20px' }}
+          />
 
-              {/* Title & Role */}
-              <h3 className="text-lg font-bold text-white mb-0.5 group-hover:text-sky-300 transition-colors">
-                {item.title}
-              </h3>
-              <p className="text-sm font-semibold text-amber-400 mb-2">
-                {item.role}
-              </p>
+          {/* Items */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+            {parcoursData.map((item, i) => (
+              <motion.div
+                key={i}
+                {...fadeUp(0.3 + i * 0.15)}
+                className="relative"
+              >
+                {/* Dot */}
+                <div className="hidden md:flex justify-start mb-6">
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center border-2 z-10 relative ${
+                      item.status === 'current'
+                        ? 'bg-[#080d16] border-blue-500'
+                        : 'bg-green-500 border-green-500'
+                    }`}
+                  >
+                    {item.status === 'completed' ? (
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <div className="w-3 h-3 rounded-full bg-blue-500" />
+                    )}
+                  </div>
+                </div>
 
-              {/* Description */}
-              <p className="text-sm text-slate-400 leading-relaxed max-w-2xl">
-                {item.desc}
-              </p>
-            </motion.div>
-          ))}
+                {/* Content */}
+                <div>
+                  {/* Badge EN COURS */}
+                  {item.status === 'current' && (
+                    <span className="inline-block bg-green-500 text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded mb-3">
+                      EN COURS
+                    </span>
+                  )}
+
+                  <p className="text-zinc-500 text-xs font-mono mb-2">{item.period}</p>
+                  <h3 className="text-white font-bold text-base mb-1 leading-snug">{item.title}</h3>
+                  <p className="text-zinc-500 text-xs leading-relaxed">{item.institution}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

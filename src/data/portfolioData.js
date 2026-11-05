@@ -8,72 +8,205 @@ export const personalInfo = {
   phone: "+225 07 58 75 71 52",
   phoneRaw: "2250758757152",
   github: "https://github.com/Dagnogo2000",
+  linkedin: "https://www.linkedin.com/in/daniel-dagnogo",
   available: true,
-  bio: "Diplômé de Licence en Génie Logiciel (DASI) à l'ESATIC, je conçois des architectures backend robustes, des APIs sécurisées et des applications web modernes. J'aime transformer des besoins métiers concrets en produits fiables et performants."
+  bio: "Je suis un développeur passionné par la construction d'architectures backend robustes et d'applications modernes qui ne se contentent pas de fonctionner, mais qui résolvent de vrais besoins avec performance et sécurité."
 };
 
-export const skillsData = [
+export const techStackData = [
   {
-    category: "Backend & APIs",
-    icon: "Server",
-    skills: ["Node.js", "Express", "Spring Boot", "Laravel", "PHP", "Python", "API REST", "JWT", "WebSockets"]
+    category: "Backend",
+    code: "01",
+    color: "#059669",
+    tools: [
+      {
+        name: "Node.js",
+        role: "Environnement JavaScript",
+        logo: "https://cdn.simpleicons.org/nodedotjs/339933"
+      },
+      {
+        name: "Express",
+        role: "APIs REST & microservices",
+        logo: "https://cdn.simpleicons.org/express/ffffff"
+      },
+      {
+        name: "Spring Boot",
+        role: "Framework Java Entreprise",
+        logo: "https://cdn.simpleicons.org/springboot/6DB33F"
+      },
+      {
+        name: "Laravel",
+        role: "Framework PHP & MVC",
+        logo: "https://cdn.simpleicons.org/laravel/FF2D20"
+      },
+      {
+        name: "Python",
+        role: "Scripts, API & données",
+        logo: "https://cdn.simpleicons.org/python/3776AB"
+      }
+    ]
   },
   {
-    category: "Frontend & UI",
-    icon: "Layout",
-    skills: ["React", "Next.js", "Angular", "TypeScript", "Tailwind CSS", "JavaScript ES6+", "HTML5 / CSS3"]
+    category: "Frontend",
+    code: "02",
+    color: "#2563eb",
+    tools: [
+      {
+        name: "React",
+        role: "Interfaces dynamiques",
+        logo: "https://cdn.simpleicons.org/react/61DAFB"
+      },
+      {
+        name: "Next.js",
+        role: "Framework React Full Stack",
+        logo: "https://cdn.simpleicons.org/nextdotjs/ffffff"
+      },
+      {
+        name: "Angular",
+        role: "Framework web structuré",
+        logo: "https://cdn.simpleicons.org/angular/DD0031"
+      },
+      {
+        name: "TypeScript",
+        role: "JavaScript typé & robuste",
+        logo: "https://cdn.simpleicons.org/typescript/3178C6"
+      },
+      {
+        name: "Tailwind CSS",
+        role: "CSS utilitaire moderne",
+        logo: "https://cdn.simpleicons.org/tailwindcss/06B6D4"
+      }
+    ]
   },
   {
-    category: "Bases de Données",
-    icon: "Database",
-    skills: ["PostgreSQL", "Neon DB", "Supabase", "MongoDB", "MySQL", "ORM / Prisma", "Modélisation SQL"]
+    category: "Database",
+    code: "03",
+    color: "#4f46e5",
+    tools: [
+      {
+        name: "PostgreSQL",
+        role: "Base relationnelle avancée",
+        logo: "https://cdn.simpleicons.org/postgresql/4169E1"
+      },
+      {
+        name: "Neon DB",
+        role: "PostgreSQL Serverless Cloud",
+        logo: "https://cdn.simpleicons.org/postgresql/00E699"
+      },
+      {
+        name: "Supabase",
+        role: "Backend as a Service (BaaS)",
+        logo: "https://cdn.simpleicons.org/supabase/3ECF8E"
+      },
+      {
+        name: "MongoDB",
+        role: "Base NoSQL orientée documents",
+        logo: "https://cdn.simpleicons.org/mongodb/47A248"
+      }
+    ]
   },
   {
-    category: "Méthodes & Outils",
-    icon: "Wrench",
-    skills: ["Git & GitHub", "Modélisation UML", "Merise", "Linux (WSL2)", "Vercel", "Postman", "CI/CD"]
+    category: "DevOps & Outils",
+    code: "04",
+    color: "#d97706",
+    tools: [
+      {
+        name: "Git",
+        role: "Gestion de versions",
+        logo: "https://cdn.simpleicons.org/git/F05032"
+      },
+      {
+        name: "GitHub",
+        role: "Collaboration & CI/CD",
+        logo: "https://cdn.simpleicons.org/github/ffffff"
+      },
+      {
+        name: "Linux (WSL2)",
+        role: "Environnement système",
+        logo: "https://cdn.simpleicons.org/linux/FCC624"
+      },
+      {
+        name: "Vercel",
+        role: "Hébergement & déploiement",
+        logo: "https://cdn.simpleicons.org/vercel/ffffff"
+      },
+      {
+        name: "Postman",
+        role: "Tests d'APIs REST",
+        logo: "https://cdn.simpleicons.org/postman/FF6C37"
+      }
+    ]
+  },
+  {
+    category: "Conception & IA",
+    code: "05",
+    color: "#7c3aed",
+    tools: [
+      {
+        name: "Modélisation UML",
+        role: "Architecture 4 couches",
+        logo: "https://cdn.simpleicons.org/diagramsdotnet/F08705"
+      },
+      {
+        name: "Intégration IA",
+        role: "Assistants & LLMs",
+        logo: "https://cdn.simpleicons.org/openai/ffffff"
+      },
+      {
+        name: "Power BI / Data",
+        role: "Tableaux de bord & KPIs",
+        logo: "https://cdn.simpleicons.org/powerbi/F2C811"
+      }
+    ]
+  }
+];
+
+export const parcoursData = [
+  {
+    period: "2021 - 2024",
+    title: "Licence en Génie Logiciel (DASI)",
+    institution: "ESATIC · École Supérieure Africaine des TIC (Abidjan)",
+    status: "completed",
+    badge: null
+  },
+  {
+    period: "2024 - 2026",
+    title: "Formation Avancée Full Stack & Systèmes",
+    institution: "ESATIC · Développement d'Architectures Web, Mobiles & Cloud",
+    status: "current",
+    badge: "EN COURS"
+  },
+  {
+    period: "En continu",
+    title: "Projets Indépendants & R&D",
+    institution: "Applications concrètes, microservices et déploiements Vercel/Cloud",
+    status: "current",
+    badge: "ACTIF"
   }
 ];
 
 export const projectsData = [
   {
-    id: "blok",
-    title: "Assistant IA de Chantier pour Blok",
-    badge: "🏆 Hackathon AethexAI × Mstudio 2026",
-    category: "Hackathon & IA",
-    featured: true,
-    shortDesc: "Candidature sélectionnée à Abidjan. En équipe de 3, j'ai assuré le rôle de Développeur Backend pour concevoir l'assistant intelligent de la marketplace B2B Blok.",
-    overview: "Développement en conditions de Hackathon d'un assistant conversationnel et analytique pour les professionnels du BTP en Côte d'Ivoire.",
-    problem: "Sur les chantiers, le calcul manuel des volumes de matériaux entraîne d'importantes erreurs d'approvisionnement et des retards coûteux.",
-    solution: "Moteur de calcul automatisé basé sur les normes de cubage combiné à une interface d'estimation et génération de devis instantanés.",
-    highlights: [
-      "Calcul automatique de cubage (sacs de ciment, tonnes de sable, gravier, fer à béton)",
-      "Comparateur dynamique des gammes et marques de matériaux de construction",
-      "Préparation et export direct des devis pour les gestionnaires de chantier"
-    ],
-    tags: ["Next.js", "TypeScript", "Backend", "IA & LLM", "REST API", "Git"]
-  },
-  {
-    id: "kouma",
-    title: "Kouma",
-    badge: "Next.js · Supabase · Vercel",
+    id: "gesstages",
+    title: "GesStages — Plateforme de Gestion des Stages",
+    badge: "Projet Phare · ESATIC",
     category: "Full Stack",
-    featured: false,
-    shortDesc: "Application web moderne ayant validé ma sélection technique au Hackathon. Interface réactive et stockage temps réel dans le cloud.",
-    overview: "Plateforme web construite pour démontrer la maîtrise d'une stack full stack moderne et réactive.",
-    problem: "Nécessité de délivrer une interface rapide, ergonomique et connectée à une base de données cloud.",
-    solution: "Architecture Next.js avec authentification et base de données PostgreSQL managée sur Supabase.",
+    featured: true,
+    shortDesc: "Plateforme complète pour dématérialiser les candidatures, conventions et évaluations de stages des étudiants de l'ESATIC.",
+    overview: "GesStages simplifie l'interaction tripartite entre étudiants, encadrants pédagogiques et tuteurs d'entreprises.",
+    problem: "Processus manuel sur papier avec risques de pertes et retards de validation de diplômes.",
+    solution: "Plateforme web réactive centralisant le dépôt, le suivi en direct et la signature électronique des conventions.",
     highlights: [
-      "Composants réactifs et performants",
-      "Persistance cloud avec Supabase",
-      "Déploiement continu automatisé sur Vercel"
+      "Tableau de bord multi-rôles (Étudiant, Tuteur, Administration)",
+      "Validation des conventions et alertes de suivi",
+      "Génération automatique d'attestations en PDF"
     ],
     tags: ["Next.js", "Supabase", "Tailwind CSS", "Vercel"]
   },
   {
     id: "restauqr",
     title: "Gestion de Restauration par QR Code",
-    badge: "🚀 Produit SaaS · Temps Réel",
+    badge: "Produit SaaS · Temps Réel",
     category: "Full Stack",
     featured: false,
     shortDesc: "Application restaurant : commande directe à table sans serveur via QR code et back-office en temps réel pour la cuisine.",
@@ -156,31 +289,3 @@ export const projectsData = [
     tags: ["UML", "Architecture 4 tiers", "Génie Logiciel", "Java"]
   }
 ];
-
-export const timelineData = [
-  {
-    year: "Octobre 2026",
-    title: "Hackathon AethexAI × Mstudio (Abidjan)",
-    role: "Développeur Backend (Équipe de 3)",
-    desc: "Sélectionné sur candidature technique. Conception du backend de l'assistant IA pour la marketplace B2B Blok et présentation au Demo Day."
-  },
-  {
-    year: "2026",
-    title: "Formation Continue Full Stack · ESATIC",
-    role: "Modules Avancés 1 à 7",
-    desc: "Perfectionnement approfondi sur Angular, Node.js, Groovy, Grails et maîtrise des environnements Linux WSL2."
-  },
-  {
-    year: "2026",
-    title: "Parcours d'Apprentissage Data Analyst",
-    role: "SQL · Python · Power BI",
-    desc: "Analyse et traitement de données pour la prise de décision stratégique et la création de tableaux de bord."
-  },
-  {
-    year: "2024",
-    title: "Licence en Génie Logiciel (DASI) · ESATIC",
-    role: "Diplôme Universitaire (Abidjan)",
-    desc: "Formation rigoureuse en algorithmique, modélisation de bases de données, génie logiciel et sécurité informatique."
-  }
-];
-
