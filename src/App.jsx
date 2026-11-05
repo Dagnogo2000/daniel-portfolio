@@ -5,6 +5,7 @@ import About from './components/About';
 import Parcours from './components/Parcours';
 import TechStack from './components/TechStack';
 import Projects from './components/Projects';
+import Hackathon from './components/Hackathon';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -28,7 +29,7 @@ function App() {
           <About />
         </section>
 
-        {/* Parcours Section */}
+        {/* Parcours & Expériences */}
         <section id="parcours">
           <Parcours />
         </section>
@@ -41,6 +42,11 @@ function App() {
         {/* Projets Section */}
         <section id="projets">
           <Projects onSelect={setSelectedProject} />
+        </section>
+
+        {/* Hackathons & Défis Tech Section */}
+        <section id="hackathons">
+          <Hackathon />
         </section>
 
         {/* Contact Section */}

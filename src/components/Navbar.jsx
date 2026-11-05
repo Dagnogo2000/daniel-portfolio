@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'PARCOURS', href: '#parcours' },
   { label: 'TECHNOLOGIES', href: '#technologies' },
   { label: 'PROJETS', href: '#projets' },
+  { label: 'HACKATHONS', href: '#hackathons' },
   { label: 'CONTACT', href: '#contact' },
 ];
 
@@ -52,7 +53,7 @@ export default function Navbar() {
         </a>
 
         {/* Center Nav links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-7">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -69,7 +70,7 @@ export default function Navbar() {
         </div>
 
         {/* Right CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-3">
           <a
             href="/cv-katie-daniel-dagnogo.pdf"
             download="CV_Katie_Daniel_Dagnogo.pdf"
@@ -87,7 +88,7 @@ export default function Navbar() {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-zinc-300 hover:text-white p-2"
+          className="lg:hidden text-zinc-300 hover:text-white p-2"
           aria-label="Menu"
         >
           <div className="flex flex-col gap-1.5 w-6">
@@ -105,7 +106,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="md:hidden bg-[#080d16]/98 backdrop-blur-2xl border-t border-zinc-800 px-6 py-6 flex flex-col gap-4"
+            className="lg:hidden bg-[#080d16]/98 backdrop-blur-2xl border-t border-zinc-800 px-6 py-6 flex flex-col gap-4"
           >
             {navLinks.map((link) => (
               <button

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { personalInfo } from '../data/portfolioData';
 
 const fadeUp = (delay = 0) => ({
@@ -11,6 +11,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function About() {
   const [copied, setCopied] = useState(false);
+  const [activePhoto, setActivePhoto] = useState('cravate'); // 'cravate' | 'hackathon'
 
   const copyEmail = () => {
     navigator.clipboard.writeText(personalInfo.email);
@@ -27,7 +28,7 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-          {/* Left column (7 cols) - Editorial & High-value Bio */}
+          {/* Left column (7 cols) - Bio & Contact */}
           <div className="lg:col-span-7">
             <motion.div {...fadeUp(0)} className="flex items-center gap-3 mb-6">
               <span className="text-xs font-bold tracking-[0.25em] uppercase text-blue-400">
@@ -55,11 +56,11 @@ export default function About() {
                 Fort d’expériences concrètes dans le secteur bancaire et fintech — notamment la conception et le développement de l’<strong className="text-cyan-300 font-semibold">application web de gestion de prêts bancaires pour les salariés de la BNI (Banque Nationale d’Investissement)</strong> et la mise en place d'un <strong className="text-cyan-300 font-semibold">portefeuille électronique chez Mandigo-SARL</strong> —, je maîtrise les exigences rigoureuses de fiabilité, de sécurité des transactions et de tenue de charge.
               </p>
               <p className="text-zinc-400 text-sm">
-                Mon objectif : allier la puissance de l'ingénierie backend, du Big Data et de l’IA pour transformer des processus métier complexes en applications fluides et pérennes.
+                Mon approche : allier la puissance de l'ingénierie backend, du Big Data et de l’IA pour transformer des processus métier complexes en applications fluides et pérennes.
               </p>
             </motion.div>
 
-            {/* Quick Metrics / Highlights */}
+            {/* Quick Metrics */}
             <motion.div {...fadeUp(0.25)} className="grid grid-cols-3 gap-3 mb-8 p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80">
               <div>
                 <p className="text-2xl font-black text-white font-heading">BNI</p>
@@ -128,50 +129,98 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Right column (5 cols) - Professional Photo of Daniel */}
+          {/* Right column (5 cols) - Photo avec Cravate ESATIC & Switch */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="lg:col-span-5 flex justify-center"
+            className="lg:col-span-5 flex flex-col items-center"
           >
-            <div className="relative group">
+            <div className="relative group w-full max-w-sm">
               {/* Glow backdrop */}
-              <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 via-cyan-500 to-indigo-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500" />
+              <div className="absolute -inset-1 bg-gradient-to-tr from-blue-600 via-emerald-500 to-cyan-500 rounded-3xl blur-xl opacity-35 group-hover:opacity-55 transition duration-500" />
               
               {/* Photo Card container */}
-              <div className="relative w-72 sm:w-80 md:w-88 rounded-2xl overflow-hidden border border-zinc-700/60 bg-zinc-900 shadow-2xl">
-                {/* Photo */}
-                <div className="aspect-[4/5] overflow-hidden bg-zinc-950 flex items-center justify-center">
-                  <img
-                    src="/profile.png"
-                    alt={personalInfo.name}
-                    className="w-full h-full object-cover object-top filter contrast-[1.02] group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.parentElement.innerHTML = `
-                        <div class="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-b from-zinc-900 to-black">
-                          <div class="w-24 h-24 rounded-full bg-blue-600 flex items-center justify-center text-4xl font-black text-white mb-4">D</div>
-                          <p class="text-white font-bold text-lg">${personalInfo.name}</p>
-                          <p class="text-zinc-400 text-xs mt-1">Master 1 BIHAR · ESATIC</p>
-                        </div>
-                      `;
-                    }}
-                  />
+              <div className="relative rounded-2xl overflow-hidden border border-zinc-750 bg-zinc-900 shadow-2xl">
+                {/* Switcher Tabs at top of card */}
+                <div className="p-2.5 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 flex items-center justify-between text-xs">
+                  <div className="flex gap-1 bg-zinc-900 p-1 rounded-lg">
+                    <button
+                      onClick={() => setActivePhoto('cravate')}
+                      className={`px-3 py-1 rounded-md font-mono text-[11px] font-bold transition-all ${
+                        activePhoto === 'cravate'
+                          ? 'bg-blue-600 text-white shadow-sm'
+                          : 'text-zinc-400 hover:text-white'
+                      }`}
+                    >
+                      🎓 Portrait ESATIC
+                    </button>
+                    <button
+                      onClick={() => setActivePhoto('hackathon')}
+                      className={`px-3 py-1 rounded-md font-mono text-[11px] font-bold transition-all ${
+                        activePhoto === 'hackathon'
+                          ? 'bg-blue-600 text-white shadow-sm'
+                          : 'text-zinc-400 hover:text-white'
+                      }`}
+                    >
+                      ⚡ Hackathon
+                    </button>
+                  </div>
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" title="Disponible" />
                 </div>
 
-                {/* Card footer info */}
-                <div className="p-4 bg-zinc-900/95 backdrop-blur-md border-t border-zinc-800 flex items-center justify-between">
-                  <div>
-                    <h3 className="text-white font-heading font-bold text-sm tracking-wide">
-                      {personalInfo.name}
-                    </h3>
-                    <p className="text-blue-400 text-xs font-mono">
-                      Ingénieur Logiciel & IA
-                    </p>
+                {/* Photo with AnimatePresence */}
+                <div className="aspect-[4/5] overflow-hidden bg-zinc-950 relative">
+                  <AnimatePresence mode="wait">
+                    {activePhoto === 'cravate' ? (
+                      <motion.img
+                        key="cravate"
+                        src="/profile.jpg"
+                        alt="Katie Daniel DAGNOGO - ESATIC"
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="w-full h-full object-cover object-center filter contrast-[1.03]"
+                      />
+                    ) : (
+                      <motion.img
+                        key="hackathon"
+                        src="/hackathon.jpg"
+                        alt="Katie Daniel DAGNOGO - Équipe Hackathon"
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="w-full h-full object-cover object-top filter contrast-[1.03]"
+                      />
+                    )}
+                  </AnimatePresence>
+
+                  {/* Floating mini-badge */}
+                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-[#080d16]/90 backdrop-blur-md border border-zinc-700/80 flex items-center justify-between">
+                    <div>
+                      <p className="text-white font-heading font-bold text-xs tracking-wide">
+                        {activePhoto === 'cravate' ? 'Katie Daniel DAGNOGO' : 'Équipe Hackathon Tech'}
+                      </p>
+                      <p className="text-blue-400 text-[11px] font-mono">
+                        {activePhoto === 'cravate' ? 'Master 1 BIHAR · ESATIC' : 'Développement Collaboratif & MVP'}
+                      </p>
+                    </div>
+                    <span className="text-xs">
+                      {activePhoto === 'cravate' ? '👔' : '🚀'}
+                    </span>
                   </div>
-                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" title="Disponible pour opportunités" />
+                </div>
+
+                {/* Card footer */}
+                <div className="p-3 bg-zinc-900 border-t border-zinc-800 text-center">
+                  <p className="text-[11px] text-zinc-400 font-mono">
+                    {activePhoto === 'cravate'
+                      ? '« Rigueur d’ingénieur et passion de bâtir »'
+                      : '« Esprit d’équipe et challenge en temps réel »'}
+                  </p>
                 </div>
               </div>
             </div>
