@@ -1,8 +1,8 @@
 export const personalInfo = {
   name: "Katie Daniel DAGNOGO",
-  title: "Ingénieur Logiciel · Master 1 BIHAR (Big Data & IA)",
+  title: "Ingénieur Logiciel · Master 2 BIHAR (Big Data & IA)",
   school: "ESATIC (Abidjan)",
-  diploma: "Master 1 BIHAR & Licence DASI",
+  diploma: "Master 2 BIHAR & Licence DASI",
   location: "Abidjan, Côte d'Ivoire",
   email: "katiedanieldagnogo001@gmail.com",
   phone: "+225 07 58 75 71 52",
@@ -10,7 +10,7 @@ export const personalInfo = {
   github: "https://github.com/Dagnogo2000",
   linkedin: "https://www.linkedin.com/in/katie-dagnogo-707325341?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
   available: true,
-  bio: "Actuellement en Master 1 BIHAR (Big Data, Intelligence Artificielle et Systèmes Intelligents) à l'ESATIC, je conçois des architectures backend sécurisées, des systèmes d'information bancaires et des solutions de données à forte valeur ajoutée. Mon parcours allie rigueur d'ingénierie logicielle, expérience en milieu bancaire (BNI) et maîtrise du cycle de vie complet des applications modernes."
+  bio: "Actuellement en Master 2 BIHAR (Big Data, Intelligence Artificielle et Systèmes Intelligents) à l'ESATIC, je conçois des architectures backend sécurisées, des systèmes d'information bancaires et des solutions de données à forte valeur ajoutée. Mon parcours allie rigueur d'ingénierie logicielle, expérience en milieu bancaire (BNI) et maîtrise du cycle de vie complet des applications modernes."
 };
 
 export const techStackData = [
@@ -168,7 +168,7 @@ export const parcoursData = [
   },
   {
     period: "Sept. 2025 - Présent",
-    title: "Master 1 BIHAR (Big Data & Intelligence Artificielle)",
+    title: "Master 2 BIHAR (Big Data & Intelligence Artificielle)",
     institution: "ESATIC · Formation d'Élite en Systèmes Intelligents & Données",
     status: "current",
     badge: "EN COURS"

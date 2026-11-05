@@ -160,7 +160,7 @@ export default function Hero() {
                 </p>
                 <p className="text-cyan-300 text-xs md:text-sm font-medium pl-4 leading-relaxed">
                   <TypewriterText
-                    text="Master 1 BIHAR (Big Data & IA) · ESATIC · Développeur d'Applications Bancaires (BNI)"
+                    text="Master 2 BIHAR (Big Data & IA) · ESATIC · Développeur d'Applications Bancaires (BNI)"
                     speed={20}
                     onDone={() => setStep(3)}
                   />

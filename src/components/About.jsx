@@ -37,7 +37,7 @@ export default function About() {
               <div className="h-px w-10 bg-blue-500/40" />
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-semibold">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                Master 1 BIHAR · ESATIC
+                Master 2 BIHAR · ESATIC
               </span>
             </motion.div>
 
@@ -50,7 +50,7 @@ export default function About() {
 
             <motion.div {...fadeUp(0.2)} className="space-y-4 text-zinc-300 text-base leading-relaxed mb-8">
               <p>
-                Actuellement en <strong className="text-white font-semibold">Master 1 BIHAR (Big Data, Intelligence Artificielle et Systèmes Intelligents)</strong> à l’<strong>ESATIC</strong>, je me spécialise dans la conception d'architectures logicielles d'entreprise, d'APIs sécurisées et de solutions de données performantes.
+                Actuellement en <strong className="text-white font-semibold">Master 2 BIHAR (Big Data, Intelligence Artificielle et Systèmes Intelligents)</strong> à l’<strong>ESATIC</strong>, je me spécialise dans la conception d'architectures logicielles d'entreprise, d'APIs sécurisées et de solutions de données performantes.
               </p>
               <p>
                 Fort d’expériences concrètes dans le secteur bancaire et fintech — notamment la conception et le développement de l’<strong className="text-cyan-300 font-semibold">application web de gestion de prêts bancaires pour les salariés de la BNI (Banque Nationale d’Investissement)</strong> et la mise en place d'un <strong className="text-cyan-300 font-semibold">portefeuille électronique chez Mandigo-SARL</strong> —, je maîtrise les exigences rigoureuses de fiabilité, de sécurité des transactions et de tenue de charge.
@@ -67,7 +67,7 @@ export default function About() {
                 <p className="text-[11px] text-zinc-400 uppercase tracking-wider font-medium">Gestion Prêts</p>
               </div>
               <div className="border-l border-zinc-800 pl-3">
-                <p className="text-2xl font-black text-blue-400 font-heading">Master 1</p>
+                <p className="text-2xl font-black text-blue-400 font-heading">Master 2</p>
                 <p className="text-[11px] text-zinc-400 uppercase tracking-wider font-medium">Big Data & IA</p>
               </div>
               <div className="border-l border-zinc-800 pl-3">
@@ -205,7 +205,7 @@ export default function About() {
                         {activePhoto === 'cravate' ? 'Katie Daniel DAGNOGO' : 'Équipe Hackathon Tech'}
                       </p>
                       <p className="text-blue-400 text-[11px] font-mono">
-                        {activePhoto === 'cravate' ? 'Master 1 BIHAR · ESATIC' : 'Développement Collaboratif & MVP'}
+                        {activePhoto === 'cravate' ? 'Master 2 BIHAR · ESATIC' : 'Développement Collaboratif & MVP'}
                       </p>
                     </div>
                     <span className="text-xs">
