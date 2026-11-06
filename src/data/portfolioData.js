@@ -153,11 +153,11 @@ export const techStackData = [
 
 export const parcoursData = [
   {
-    period: "2019 - 2020",
-    title: "Baccalauréat Scientifique (Série D)",
-    institution: "Lycée Moderne Belle Ville · Bouaké",
-    status: "completed",
-    badge: null
+    period: "Sept. 2025 - Présent",
+    title: "Master 2 BIHAR (Big Data & Intelligence Artificielle)",
+    institution: "ESATIC · Formation d'Élite en Systèmes Intelligents & Données",
+    status: "current",
+    badge: "EN COURS"
   },
   {
     period: "2024 - 2025",
@@ -167,11 +167,11 @@ export const parcoursData = [
     badge: "DIPLÔMÉ"
   },
   {
-    period: "Sept. 2025 - Présent",
-    title: "Master 2 BIHAR (Big Data & Intelligence Artificielle)",
-    institution: "ESATIC · Formation d'Élite en Systèmes Intelligents & Données",
-    status: "current",
-    badge: "EN COURS"
+    period: "2019 - 2020",
+    title: "Baccalauréat Scientifique (Série D)",
+    institution: "Lycée Moderne Belle Ville · Bouaké",
+    status: "completed",
+    badge: null
   }
 ];
 

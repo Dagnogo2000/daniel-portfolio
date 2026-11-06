@@ -42,7 +42,7 @@ export default function Parcours() {
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
-              className="hidden md:block absolute top-[19px] left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500 via-emerald-400 to-blue-500 origin-left"
+              className="hidden md:block absolute top-[19px] left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-emerald-400 to-emerald-500 origin-left"
             />
 
             {/* Steps */}
