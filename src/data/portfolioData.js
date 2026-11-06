@@ -194,24 +194,74 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    id: "bni-pret",
-    title: "Gestion des Prêts Bancaires (Salariés BNI)",
-    shortName: "BNI Prêts",
+    id: "blok-voice",
+    title: "BLOK Voice Copilot — Assistant Vocal de Chantier",
+    shortName: "AI Voix Copilot",
     year: "2026",
-    badge: "🏦 Banque Nationale d'Investissement",
+    badge: "🎙️ Intelligence Artificielle Vocale",
+    category: "Data & IA",
+    featured: true,
+    image: "/projects/blok-voice.jpg",
+    secondaryImage: null,
+    liveUrl: null,
+    mockupType: "voice-ai",
+    shortDesc: "Assistant vocal intelligent de chantier permettant aux artisans et chefs de projet de commander des matériaux BTP par la voix avec transcription en direct et chiffrage automatique.",
+    overview: "BLOK Voice Copilot révolutionne la prise de commande sur les chantiers : l'artisan converse naturellement et le copilote IA extrait instantanément les matériaux (ciment, sable, gravier), les quantités et génère le devis en FCFA en temps réel.",
+    problem: "Sur un chantier actif, manipuler un écran avec des gants ou dans la poussière est contraignant et engendre des erreurs coûteuses de transmission de commandes.",
+    solution: "Une architecture alliant reconnaissance vocale continue, traitement du langage naturel (NLP/LLM) et moteur de calcul de devis instantané avec retour écrit et audio en direct.",
+    highlights: [
+      "Transcription vocale temps réel avec indicateur de flux audio",
+      "Extraction automatique d'entités métier (produits BTP, unités, quantités)",
+      "Génération dynamique du bon de commande et devis chiffré (FCFA)",
+      "Interface ergonomique pensée pour les professionnels du bâtiment"
+    ],
+    tags: ["Intelligence Artificielle", "NLP / LLMs", "Transcription Vocale", "Python", "React", "FastAPI"]
+  },
+  {
+    id: "mafamille",
+    title: "Espace MaFamille — Gestion de Tontine & Réunions",
+    shortName: "Réunion Famille",
+    year: "2026",
+    badge: "🌐 Web App Déployée · Vercel",
     category: "Full Stack",
     featured: true,
-    image: null,
+    image: "/projects/mafamille-dashboard.jpg",
+    secondaryImage: "/projects/mafamille-login.png",
+    liveUrl: "https://reunion-famille.vercel.app",
+    mockupType: "family-app",
+    shortDesc: "Plateforme web complète de gestion associative et tontines familiales : trésorerie en direct, suivi des cotisations, calendrier des réunions et pointage de l'assiduité.",
+    overview: "Déployée et opérationnelle en production sur Vercel, cette application centralise et sécurise les finances et assemblées familiales.",
+    problem: "Les cahiers de cotisations physiques génèrent des contestations, un manque de visibilité sur le solde réel de caisse et des retards de paiement réguliers.",
+    solution: "Un tableau de bord moderne et transparent permettant à chaque membre de suivre ses versements, les dépenses validées et le solde exact de la tontine en temps réel.",
+    highlights: [
+      "Tableau de bord financier complet (Cotisations, Impayés, Dépenses, Solde)",
+      "Suivi de l'assiduité aux assemblées avec système d'alertes",
+      "Espace d'authentification individuel sécurisé",
+      "Hébergé et accessible en ligne sur Vercel"
+    ],
+    tags: ["Next.js", "Neon PostgreSQL", "Supabase", "Tailwind CSS", "Vercel"]
+  },
+  {
+    id: "bni-pret",
+    title: "Gestion des Prêts Bancaires (Salariés BNI)",
+    shortName: "BNI Prêt Bancaire",
+    year: "2026",
+    badge: "🏦 Banque Nationale d'Investissement",
+    category: "Fintech & Backend",
+    featured: true,
+    image: "/projects/bni-pret.png",
+    secondaryImage: "/projects/bni-login.jpg",
+    liveUrl: null,
     mockupType: "banking",
-    shortDesc: "Application web bancaire d'instruction, simulation et gestion des demandes de prêt destinées aux salariés de la BNI avec workflow d'approbation sécurisé.",
+    shortDesc: "Application web bancaire d'instruction, simulation et gestion des demandes de prêt destinées aux collaborateurs de la BNI avec workflow d'approbation sécurisé.",
     overview: "Développée au sein de la Banque Nationale d'Investissement (BNI), cette solution optimise et digitalise l'ensemble du cycle de vie des prêts accordés aux collaborateurs de la banque.",
     problem: "Lenteur des circuits de validation papier, risques d'erreurs dans le calcul des taux d'endettement et manque de visibilité en temps réel pour la direction des ressources humaines et le service des crédits.",
     solution: "Une plateforme sécurisée intégrant un moteur de calcul de capacité d'emprunt, la génération automatique d'échéanciers de remboursement et un circuit d'approbation multi-niveaux avec traçabilité complète.",
     highlights: [
+      "Portail d'authentification dédié 'Demande de Prêt Interne BNI'",
       "Simulateur dynamique de capacité d'emprunt et tableau d'amortissement",
       "Circuit de validation hiérarchique (Agent, RH, Comité de crédit)",
-      "Gestion rigoureuse des profils, habilitations et audit des actions",
-      "Génération automatique des contrats et notifications d'état"
+      "Traçabilité intégrale, audit des actions et sécurité bancaire"
     ],
     tags: ["Spring Boot", "PostgreSQL", "Angular", "Sécurité Bancaire", "UML"]
   },
@@ -222,8 +272,10 @@ export const projectsData = [
     year: "2023",
     badge: "💳 Mandigo-SARL · Fintech",
     category: "Full Stack",
-    featured: true,
+    featured: false,
     image: null,
+    secondaryImage: null,
+    liveUrl: null,
     mockupType: "wallet",
     shortDesc: "Solution e-wallet permettant les transferts d'argent instantanés, le rechargement de soldes et le paiement sécurisé de services.",
     overview: "Système de portefeuille électronique conçu lors de ma mission chez Mandigo-SARL pour démocratiser les transactions numériques fiables.",
@@ -245,6 +297,8 @@ export const projectsData = [
     category: "Full Stack",
     featured: false,
     image: null,
+    secondaryImage: null,
+    liveUrl: null,
     mockupType: "mobile",
     shortDesc: "Application restaurant : commande directe à table sans serveur via QR code et back-office en direct pour la cuisine.",
     overview: "Solution pensée pour accélérer les prises de commande dans les établissements de restauration avec synchronisation instantanée.",
@@ -266,6 +320,8 @@ export const projectsData = [
     category: "Data & IA",
     featured: false,
     image: null,
+    secondaryImage: null,
+    liveUrl: null,
     mockupType: "dashboard",
     shortDesc: "Mise en production d'un pipeline de prédiction Machine Learning exposé via une API Django avec interface d'inférence en direct.",
     overview: "Projet d'ingénierie des données démontrant l'intégration concrète de l'IA dans une application web opérationnelle.",
@@ -277,47 +333,5 @@ export const projectsData = [
       "Monitoring des performances du modèle"
     ],
     tags: ["Python", "Django", "Scikit-Learn", "Machine Learning", "APIs"]
-  },
-  {
-    id: "ecommerce",
-    title: "Plateforme E-Commerce Complète",
-    shortName: "E-Commerce",
-    year: "2025",
-    badge: "🛒 Web App Déployée",
-    category: "Full Stack",
-    featured: false,
-    image: null,
-    mockupType: "shop",
-    shortDesc: "Boutique en ligne avec gestion de catalogue, panier d'achat persistant, commandes clients et interface d'administration.",
-    overview: "Plateforme marchande responsive offrant une expérience utilisateur fluide de la sélection de produits jusqu'au passage de commande.",
-    problem: "Besoin d'une plateforme légère, rapide au chargement et facile à administrer sans lourdeur technique.",
-    solution: "Front-end réactif couplé à une base de données relationnelle optimisée pour les recherches par filtres et le suivi des stocks.",
-    highlights: [
-      "Panier réactif et calcul instantané des totaux",
-      "Gestion des stocks et back-office d'administration",
-      "Design soigné optimisé pour la navigation mobile"
-    ],
-    tags: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"]
-  },
-  {
-    id: "chat",
-    title: "Messagerie Instantanée Sécurisée",
-    shortName: "Chat Sockets",
-    year: "2024",
-    badge: "⚡ Temps Réel & Sécurité",
-    category: "Backend",
-    featured: false,
-    image: null,
-    mockupType: "chat",
-    shortDesc: "Messagerie complète avec communication bidirectionnelle persistante, salons thématiques et chiffrement des accès.",
-    overview: "Système de chat instantané conçu pour explorer la haute concurrence et la sécurité des protocoles d'échange web.",
-    problem: "Assurer la transmission fluide de messages sans rechargement tout en protégeant l'identité et les échanges des utilisateurs.",
-    solution: "Architecture événementielle Node.js avec sockets persistants et authentification renforcée par tokens JWT signés.",
-    highlights: [
-      "Authentification robuste (mots de passe hachés bcrypt, JWT)",
-      "Canaux publics et discussions privées chiffrées",
-      "Indicateurs de présence et statut de frappe en temps réel"
-    ],
-    tags: ["Node.js", "WebSockets", "MongoDB", "JWT"]
   }
 ];
