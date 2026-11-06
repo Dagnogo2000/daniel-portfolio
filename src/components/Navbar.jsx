@@ -46,10 +46,10 @@ export default function Navbar() {
           onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           className="flex items-center gap-0.5 group"
         >
-          <span className="font-heading font-black text-xl tracking-tight text-white uppercase group-hover:text-zinc-200 transition-colors">
-            PORTFOLIO
+          <span className="font-heading font-black text-xs sm:text-sm md:text-base tracking-wider text-white uppercase group-hover:text-zinc-200 transition-colors">
+            DAGNOGO KATIE DANIEL
           </span>
-          <span className="text-blue-500 font-black text-xl">.</span>
+          <span className="text-blue-500 font-black text-base md:text-lg">.</span>
         </a>
 
         {/* Center Nav links */}

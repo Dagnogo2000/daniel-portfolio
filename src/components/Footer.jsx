@@ -5,10 +5,10 @@ export default function Footer() {
     <footer className="py-12 border-t border-zinc-850 text-zinc-500 text-xs bg-[#080d16]">
       <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-2">
-          <span className="font-bold text-white tracking-wider">PORTFOLIO</span>
+          <span className="font-bold text-white tracking-wider">DAGNOGO KATIE DANIEL</span>
           <span className="text-blue-500 font-bold">.</span>
           <span className="text-zinc-600">|</span>
-          <span>© {new Date().getFullYear()} {personalInfo.name}</span>
+          <span>© {new Date().getFullYear()}</span>
         </div>
         <div className="flex items-center gap-6">
           <button
