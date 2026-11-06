@@ -194,6 +194,56 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    id: "chic-restaurant",
+    title: "Chic. — SaaS Restauration par QR Code",
+    shortName: "Chic. Restaurant",
+    year: "2026",
+    badge: "🍽️ SaaS Restauration · QR Code",
+    category: "Full Stack",
+    featured: true,
+    image: "/projects/chic-phone.png",
+    fullScreenshot: "/projects/chic-restaurant.jpg",
+    secondaryImage: null,
+    liveUrl: null,
+    mockupType: "restaurant",
+    tagline: "Vos tables commandent. Vous pilotez.",
+    shortDesc: "Un QR par table, un menu vivant et la cuisine en temps réel — pour chaque restaurant, sur un seul outil.",
+    overview: "Chic. digitalise l'expérience en restaurant et maquis : chaque table dispose d'un QR code unique permettant aux clients de consulter le menu et commander sur leur smartphone tandis que la cuisine reçoit instantanément les tickets en direct.",
+    problem: "Files d'attente, serveurs surchargés aux heures de pointe et retards fréquents dans la transmission des commandes vers la cuisine.",
+    solution: "Architecture temps réel par QR code sans aucune application à installer pour le client, synchronisée avec un tableau de bord gérant et un écran cuisine instantané.",
+    highlights: [
+      "QR code unique et dynamique par table (ex: 'Table 4 - scan')",
+      "Menu digital interactif (Attiéké poisson, Jus bissap, Alloco...)",
+      "Transmission temps réel en cuisine dès validation de la commande",
+      "Tableau de bord gérant : pilotage des recettes et des tables"
+    ],
+    tags: ["Next.js", "Node.js", "WebSockets", "QR Engine", "PostgreSQL", "Tailwind CSS"]
+  },
+  {
+    id: "bni-pret",
+    title: "Gestion des Prêts Bancaires (Salariés BNI)",
+    shortName: "BNI Prêt Bancaire",
+    year: "2026",
+    badge: "🏦 Banque Nationale d'Investissement",
+    category: "Fintech & Backend",
+    featured: true,
+    image: "/projects/bni-pret.png",
+    secondaryImage: "/projects/bni-login.jpg",
+    liveUrl: null,
+    mockupType: "banking",
+    shortDesc: "Application web bancaire d'instruction, simulation et gestion des demandes de prêt destinées aux collaborateurs de la BNI avec workflow d'approbation sécurisé.",
+    overview: "Développée au sein de la Banque Nationale d'Investissement (BNI), cette solution optimise et digitalise l'ensemble du cycle de vie des prêts accordés aux collaborateurs de la banque.",
+    problem: "Lenteur des circuits de validation papier, risques d'erreurs dans le calcul des taux d'endettement et manque de visibilité en temps réel pour la direction des ressources humaines et le service des crédits.",
+    solution: "Une plateforme sécurisée intégrant un moteur de calcul de capacité d'emprunt, la génération automatique d'échéanciers de remboursement et un circuit d'approbation multi-niveaux avec traçabilité complète.",
+    highlights: [
+      "Portail d'authentification dédié 'Demande de Prêt Interne BNI'",
+      "Simulateur dynamique de capacité d'emprunt et tableau d'amortissement",
+      "Circuit de validation hiérarchique (Agent, RH, Comité de crédit)",
+      "Traçabilité intégrale, audit des actions et sécurité bancaire"
+    ],
+    tags: ["Spring Boot", "PostgreSQL", "Angular", "Sécurité Bancaire", "UML"]
+  },
+  {
     id: "blok-voice",
     title: "BLOK Voice Copilot — Assistant Vocal de Chantier",
     shortName: "AI Voix Copilot",
@@ -242,30 +292,6 @@ export const projectsData = [
     tags: ["Next.js", "Neon PostgreSQL", "Supabase", "Tailwind CSS", "Vercel"]
   },
   {
-    id: "bni-pret",
-    title: "Gestion des Prêts Bancaires (Salariés BNI)",
-    shortName: "BNI Prêt Bancaire",
-    year: "2026",
-    badge: "🏦 Banque Nationale d'Investissement",
-    category: "Fintech & Backend",
-    featured: true,
-    image: "/projects/bni-pret.png",
-    secondaryImage: "/projects/bni-login.jpg",
-    liveUrl: null,
-    mockupType: "banking",
-    shortDesc: "Application web bancaire d'instruction, simulation et gestion des demandes de prêt destinées aux collaborateurs de la BNI avec workflow d'approbation sécurisé.",
-    overview: "Développée au sein de la Banque Nationale d'Investissement (BNI), cette solution optimise et digitalise l'ensemble du cycle de vie des prêts accordés aux collaborateurs de la banque.",
-    problem: "Lenteur des circuits de validation papier, risques d'erreurs dans le calcul des taux d'endettement et manque de visibilité en temps réel pour la direction des ressources humaines et le service des crédits.",
-    solution: "Une plateforme sécurisée intégrant un moteur de calcul de capacité d'emprunt, la génération automatique d'échéanciers de remboursement et un circuit d'approbation multi-niveaux avec traçabilité complète.",
-    highlights: [
-      "Portail d'authentification dédié 'Demande de Prêt Interne BNI'",
-      "Simulateur dynamique de capacité d'emprunt et tableau d'amortissement",
-      "Circuit de validation hiérarchique (Agent, RH, Comité de crédit)",
-      "Traçabilité intégrale, audit des actions et sécurité bancaire"
-    ],
-    tags: ["Spring Boot", "PostgreSQL", "Angular", "Sécurité Bancaire", "UML"]
-  },
-  {
     id: "mandigo-wallet",
     title: "Application de Portefeuille Électronique",
     shortName: "Mandigo Wallet",
@@ -287,29 +313,6 @@ export const projectsData = [
       "Interface épurée et adaptée aux mobiles pour les utilisateurs"
     ],
     tags: ["PHP", "Laravel", "MySQL", "APIs REST", "Fintech"]
-  },
-  {
-    id: "restauqr",
-    title: "Système de Restauration par QR Code",
-    shortName: "RestauQR",
-    year: "2026",
-    badge: "🚀 Produit SaaS · Temps Réel",
-    category: "Full Stack",
-    featured: false,
-    image: null,
-    secondaryImage: null,
-    liveUrl: null,
-    mockupType: "mobile",
-    shortDesc: "Application restaurant : commande directe à table sans serveur via QR code et back-office en direct pour la cuisine.",
-    overview: "Solution pensée pour accélérer les prises de commande dans les établissements de restauration avec synchronisation instantanée.",
-    problem: "Files d'attente, temps d'attente excessifs et erreurs de transmission lors des heures de pointe.",
-    solution: "QR code unique par table permettant au client de consulter le menu et commander en un clic pendant que la cuisine reçoit les tickets en temps réel.",
-    highlights: [
-      "Génération automatique et dynamique des QR codes par table",
-      "Tableau de bord gérant : suivi en temps réel du chiffre d'affaires",
-      "Notification instantanée en cuisine via WebSockets"
-    ],
-    tags: ["Node.js", "PostgreSQL", "WebSockets", "Tailwind CSS"]
   },
   {
     id: "ml-django",
